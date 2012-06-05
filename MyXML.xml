@@ -4,7 +4,7 @@
     <Require feature="rpc"/>
     <Require feature="views"/>
   </ModulePrefs>
-  <Content type="html">
+  <Content type="html" style="background-color:#FFA500;">
     <![CDATA[
       <script src="//talkgadget.google.com/hangouts/_/api/hangout.js?v=1.1"></script>
       
