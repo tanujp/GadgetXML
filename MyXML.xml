@@ -54,7 +54,7 @@ function init() {
            // .style.visibility = 'visible';
            // gapi.hangout.onParticipantsChanged.add(this.refreshParticipantsList.bind(this));
             this.showParticipants();
-            createParticipantVideoFeed(participant Id);
+            
         }
       });
 }
