@@ -9,7 +9,7 @@
       <script src="//talkgadget.google.com/hangouts/_/api/hangout.js?v=1.1"></script>
       
 <div id="left" style="background-color:#FFA500;margin-top:0;float:left;"><img src="https://github.com/tanujp/GadgetXML/raw/master/talent_sprint.gif"/></div>
-<div id="right" style="width:100px;height:100px;float:center;"><h3>Welcome to TalentSprint</h3></div>
+<div id="right" style="width:100px;height:100px;float:left;"><h3>Welcome to TalentSprint</h3></div>
 
 
 <p>
