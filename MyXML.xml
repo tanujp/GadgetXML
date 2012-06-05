@@ -8,7 +8,8 @@
     <![CDATA[
       <script src="//talkgadget.google.com/hangouts/_/api/hangout.js?v=1.1"></script>
       
-h3>Simple Hangout App</h3>
+<div id="head" bgcolor="skyblue"><h3>Talent Sprint</h3><img src="https://github.com/tanujp/GadgetXML/raw/master/talent_sprint.gif"/></div>
+
 
 <p>
 <input class="button" type="button" value="Show participants!" id="showParticipants" 
