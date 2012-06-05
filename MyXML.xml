@@ -12,7 +12,7 @@
 <div id="right" style="width:100px;height:100px;float:left;margin-left:10px;margin-top:0;"><h3>Welcome to TalentSprint</h3></div>
 
 <p>
-<input class="button" type="button" value="Show participants!" id="showParticipants" 
+<input class="button" type="button" value="List Trainees" id="showParticipants" 
     style="visibility:hidden;"
     onClick="showParticipants()"/>
 </p>
