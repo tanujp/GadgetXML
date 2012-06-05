@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="https://raw.github.com/tanujp/GadgetXML/master/Application.css" />
 
 <!-- Base Content -->
-<div id="container" style="width: 500px;"></div>
+<div id="container" style="width: 250px;"></div>
 
 <script src="https://raw.github.com/tanujp/GadgetXML/master/Application.js"></script>
 
