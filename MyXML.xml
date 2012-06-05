@@ -18,9 +18,11 @@
     onClick="showParticipants()"/>
 </p>
 ---->
-<h2>Trainees: </h2>
+
+<h4>Trainees: </h4>
 <div id="participantsDiv"></div>
 
+//Function to show all the Participants
 <script>
 function showParticipants() {
   var participants = gapi.hangout.getParticipants();
@@ -42,6 +44,7 @@ function showParticipants() {
 
   div.innerHTML = retVal;
 }
+
 function init() {
   // When API is ready...                                                         
   gapi.hangout.onApiReady.add(
