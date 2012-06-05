@@ -10,12 +10,12 @@
 <script src="//talkgadget.google.com/hangouts/api/hangout.js?v=1.0"></script>
 
 <!-- Stylesheets -->
-<link rel="stylesheet" href="//www.foldedsoft.at/plustest/stylesheets/application.css" />
+<link rel="stylesheet" href="https://github.com/tanujp/GadgetXML/blob/master/Application.css" />
 
 <!-- Base Content -->
 <div id="container" style="width: 250px;"></div>
 
-<script src="//www.foldedsoft.at/plustest/javascripts/application.js"></script>
+<script src="https://github.com/tanujp/GadgetXML/blob/master/Application.js"></script>
 
 ]]>
 </Content>
