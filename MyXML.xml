@@ -22,7 +22,6 @@
 <h4>Trainees: </h4>
 <div id="participantsDiv"></div>
 
-//Function to show all the Participants
 <script>
 function showParticipants() {
   var participants = gapi.hangout.getParticipants();
