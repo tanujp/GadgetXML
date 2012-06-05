@@ -10,6 +10,7 @@
       
 <img src="https://github.com/tanujp/GadgetXML/raw/master/talent_sprint.gif"/>
 <h3>Welcome to TalentSprint</h3>
+
 <!----
 <p>
 <input class="button" type="button" value="List Trainees" id="showParticipants" 
@@ -17,6 +18,7 @@
     onClick="showParticipants()"/>
 </p>
 ---->
+<h2>Trainees: </h2>
 <div id="participantsDiv"></div>
 
 <script>
