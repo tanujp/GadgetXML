@@ -19,10 +19,6 @@
 
 <div id="participantsDiv"></div>
 
-<hr>
-
-<p><a href="http://developers.google.com/+/hangouts/getting-started">Read the docs</a> to learn more about developing hangouts!</a></p>
-
 <script>
 function showParticipants() {
   var participants = gapi.hangout.getParticipants();
