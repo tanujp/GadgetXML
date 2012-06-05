@@ -10,13 +10,13 @@
       
 <img src="https://github.com/tanujp/GadgetXML/raw/master/talent_sprint.gif"/>
 <h3>Welcome to TalentSprint</h3>
-
+/*
 <p>
 <input class="button" type="button" value="List Trainees" id="showParticipants" 
     style="visibility:hidden;"
     onClick="showParticipants()"/>
 </p>
-
+*/
 <div id="participantsDiv"></div>
 
 <script>
@@ -45,8 +45,10 @@ function init() {
   gapi.hangout.onApiReady.add(
       function(eventObj) {
         if (eventObj.isApiReady) {
-          document.getElementById('showParticipants')
-            .style.visibility = 'visible';
+          //document.getElementById('showParticipants')
+           // .style.visibility = 'visible';
+           // gapi.hangout.onParticipantsChanged.add(this.refreshParticipantsList.bind(this));
+            this.showParticipants();
         }
       });
 }
