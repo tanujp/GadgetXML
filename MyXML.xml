@@ -8,8 +8,8 @@
     <![CDATA[
       <script src="//talkgadget.google.com/hangouts/_/api/hangout.js?v=1.1"></script>
       
-<div id="left" style="background-color:red;width:100px;height:100px"><img src="https://github.com/tanujp/GadgetXML/raw/master/talent_sprint.gif"/></div>
-<div id="right" style="width:100px;height:100px"><h3>Welcome to TalentSprint</h3></div>
+<div id="left" style="background-color:red;width:100px;height:100px;float:left;"><img src="https://github.com/tanujp/GadgetXML/raw/master/talent_sprint.gif"/></div>
+<div id="right" style="width:100px;height:100px;float:left;"><h3>Welcome to TalentSprint</h3></div>
 
 
 <p>
