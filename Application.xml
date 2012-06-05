@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+<ModulePrefs title="GooglePlusDemo">
+<Require feature="rpc"/>
+<Require feature="views"/>
+</ModulePrefs>
+<Content type="html">
+<![CDATA[
+<!-- Javascript -->
+<script src="//talkgadget.google.com/hangouts/api/hangout.js?v=1.0"></script>
+
+<!-- Stylesheets -->
+<link rel="stylesheet" href="//www.foldedsoft.at/plustest/stylesheets/application.css" />
+
+<!-- Base Content -->
+<div id="container" style="width: 250px;"></div>
+
+<script src="//www.foldedsoft.at/plustest/javascripts/application.js"></script>
+
+]]>
+</Content>
+</Module>
