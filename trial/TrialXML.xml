@@ -33,23 +33,13 @@ function showParticipants() {
 
   div.innerHTML = retVal;
 }
-
-  retVal += '</ul>';
-
-  var div = document.getElementById('participantsDiv');
-
-  div.innerHTML = retVal;
-
-}
-
-
   function init() {
   // When API is ready...                                                         
   gapi.hangout.onApiReady.add(
       function(eventObj) {
         if (eventObj.isApiReady) {
-            //this.showParticipants();
-            gapi.hangout.onParticipantsAdded.add(this.showParticipants);
+            this.showParticipants();
+           //gapi.hangout.onParticipantsAdded.add(this.showParticipants);
         }
       });
   }
