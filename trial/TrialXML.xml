@@ -24,7 +24,7 @@ function showParticipants() {
     if (!participant.person) {
       retVal += '<li>A participant not running this app</li>';
     }
-    retVal += '<li>' + participant.person.displayName +'<img src='participant.person.image.url'/>'+ '</li>';
+    retVal += "<li>" + participant.person.displayName +"<img src=\"+ currentClient.person.image.url + "\" width=\"32\" height=\"32\" /></li>";
   }
 
   retVal += '</ul>';
