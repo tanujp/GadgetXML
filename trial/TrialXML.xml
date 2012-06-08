@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+  <ModulePrefs title="Talent Sprint">
+    <Require feature="rpc"/>
+    <Require feature="views"/>
+  </ModulePrefs>
+  <Content type="html">
+    <![CDATA[
+      <script src="//talkgadget.google.com/hangouts/_/api/hangout.js?v=1.1"></script>
+  
+  <img src="https://github.com/tanujp/GadgetXML/raw/master/talent_sprint.gif"/>	 
+  <h3>Welcome to TalentSprint</h3>
+  <h4>Trainees:</h4>	
+  <p id="participantsDiv">No Trainees joined</p>   
+<script>	
+  
+function showParticipants(){
+  var participants = gapi.hangout.getParticipants();
+
+  var retVal = '<ul>';
+
+  for (var index in participants) {
+    var participant = participants[index];
+
+    if (!participant.person) {
+      retVal += '<li>A participant not running this app</li>';
+    }
+    retVal += '<li>' + participant.person.displayName +participant.person.image + '</li>';
+    
+  }
+
+  retVal += '</ul>';
+
+  var div = document.getElementById('participantsDiv');
+
+  div.innerHTML = retVal;
+
+}
+
+
+  function init() {
+  // When API is ready...                                                         
+  gapi.hangout.onApiReady.add(
+      function(eventObj) {
+        if (eventObj.isApiReady) {
+            this.showParticipants();
+        }
+      });
+  }
+
+  // Wait for gadget to load.                                                       
+  gadgets.util.registerOnLoadHandler(init);
+
+</script>   	
+    ]]>
+  </Content>
+</Module>
