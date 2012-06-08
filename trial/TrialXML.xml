@@ -12,10 +12,10 @@
   <h3>Welcome to TalentSprint</h3>	
   <p id="participantsDiv">No Trainees joined</p>   
 <script>	
-refreshParticipantsList = function(event){
-document.getElementById("participantsDiv").innerHTML=""
-this.showParticipants();
-}
+//refreshParticipantsList = function(event){
+//document.getElementById("participantsDiv").innerHTML=""
+//this.showParticipants();
+//}
 
 function showParticipants() {
   var participants = gapi.hangout.getParticipants();
@@ -43,7 +43,7 @@ function showParticipants() {
       function(eventObj) {
         if (eventObj.isApiReady) {
             this.showParticipants();
-           gapi.hangout.onParticipantsChanged.add(this.refreshParticipantsList.bind(this));
+           gapi.hangout.onParticipantsChanged.add(this.showParticipants);
         }
       });
   }
