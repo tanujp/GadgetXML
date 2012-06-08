@@ -39,7 +39,7 @@ function showParticipants() {
       function(eventObj) {
         if (eventObj.isApiReady) {
             this.showParticipants();
-           //gapi.hangout.onParticipantsAdded.add(this.showParticipants);
+           gapi.hangout.onParticipantsAdded.add(this.showParticipants);
         }
       });
   }
