@@ -43,7 +43,8 @@ function showParticipants(){
   gapi.hangout.onApiReady.add(
       function(eventObj) {
         if (eventObj.isApiReady) {
-            this.showParticipants();
+            //this.showParticipants();
+            gapi.hangout.onParticipantsAdded.add(this.showParticipants);
         }
       });
   }
