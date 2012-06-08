@@ -18,8 +18,8 @@ function showParticipants() {
 
   var retVal = '<h4>Trainees: </h4><ul>';
 
-  for (var index in participants) {
-    var participant = participants[index];
+  for(var i=1;i<clients.length;i++){
+    var participant = participants[i];
 
     if (!participant.person) {
       retVal += '<li>A participant not running this app</li>';
