@@ -15,12 +15,13 @@
   <p id="No">Number</p>
 <script>	
 var NoOfParticipants=0;
+var participantsId;
 function showParticipants() {
   var participants = gapi.hangout.getParticipants();
   var retVal = '<h4>Trainees: </h4><ul>';
   for(var i=0;i<participants.length;i++){
     ++NoOfParticipants;
-    var participantId = gapi.hangout.getParticipantId();
+    participantId = gapi.hangout.getParticipantId();
     var participant = participants[i];
 
     if (!participant.person) {
@@ -35,8 +36,7 @@ function showParticipants() {
 
   div.innerHTML = retVal;
   document.getElementById("No").innerHTML = NoOfParticipants;
-  //var Id1 = document.getElemenetById("Trainer");
-  //Id1.innerHTML = participantId;
+  document.getElemenetById("Trainer").innerHTML=participantId;
   //showVideoFeed();
   
 }
