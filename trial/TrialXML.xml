@@ -18,10 +18,8 @@ var NoOfParticipants=0;
 function showParticipants() {
   var participants = gapi.hangout.getParticipants();
   var retVal = '<h4>Trainees: </h4><ul>';
-  var participantIds = gapi.hangout.participants.getParticipantId();
   for(var i=0;i<participants.length;i++){
     ++NoOfParticipants;
-    var participantId=participantsId[i];
     var participant = participants[i];
 
     if (!participant.person) {
@@ -36,20 +34,10 @@ function showParticipants() {
 
   div.innerHTML = retVal;
   
-  document.getElemenetById("Trainer").innerHTML=participantId;
-  document.getElementById("No").innerHTML=NoOfParticipants;
+  document.getElementById("No").innerHTML = NoOfParticipants;
   //showVideoFeed();
   
 }
-
-//function showVideoFeed(){
-
-//switch(NoOfParticipants)
-  //{
-   // Case 1 : 
-  //}
-
-//}
 
  // When Gadget is ready...
   function init() {
@@ -68,8 +56,10 @@ function showParticipants() {
       console.log('Participants Changed');
       showParticipants();
       });
-      
-      }  
+    var participantId= gapi.hangout.getPartiicipantId();
+    var Id1 = document.getElemenetById("Trainer");
+    Id1.innerHTML = participantId;
+    }  
       });
   }
 
