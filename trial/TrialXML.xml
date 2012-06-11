@@ -16,11 +16,12 @@
 var NoOfParticipants;
 function showParticipants() {
   var participants = gapi.hangout.getParticipants();
-  var TrainerId = participants[0].getParticipantId();
+  //var TrainerId = participants[0].getParticipantId();
   var retVal = '<h4>Trainees: </h4><ul>';
 
-  for(var i=1;i<participants.length;i++){
+  for(var i=0;i<participants.length;i++){
     ++NoOfParticipants;
+    var participantId = gapi.hangout.getParticipantId();
     var participant = participants[i];
 
     if (!participant.person) {
@@ -35,8 +36,8 @@ function showParticipants() {
 
   div.innerHTML = retVal;
   
-  document.getElemenetById("Trainer").innerHTML=TrainerId;
-  
+  document.getElemenetById("Trainer").innerHTML=participantId;
+  document.write(NoOfParticipants);
   //showVideoFeed();
   
 }
