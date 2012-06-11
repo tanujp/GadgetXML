@@ -20,7 +20,7 @@ function showParticipants() {
   var retVal = '<h4>Trainees: </h4><ul>';
   for(var i=0;i<participants.length;i++){
     ++NoOfParticipants;
-    var participantId = gapi.hangout.participants[0].getParticipantId();
+    var participantId = gapi.hangout.getParticipantId();
     var participant = participants[i];
 
     if (!participant.person) {
@@ -35,8 +35,8 @@ function showParticipants() {
 
   div.innerHTML = retVal;
   document.getElementById("No").innerHTML = NoOfParticipants;
-  var Id1 = document.getElemenetById("Trainer");
-  Id1.innerHTML = participantId;
+  //var Id1 = document.getElemenetById("Trainer");
+  //Id1.innerHTML = participantId;
   //showVideoFeed();
   
 }
