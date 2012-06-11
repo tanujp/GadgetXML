@@ -18,31 +18,49 @@
 var NoOfParticipants=0;
 var participantsId = new Array();
 function showParticipants() {
-  var j=0;
+ 
   var participants = gapi.hangout.getParticipants();
   var retVal = '<h4>Trainees: </h4><ul>';
   var TrainerId = participants[0].id;
+  
   for(var i=1;i<participants.length;i++){
     ++NoOfParticipants;
+    var j=0;
     var participant = participants[i];
-    
-  var participantsId[j] = participant.id;
+    var participantsId[j] = participant.id;
     
     if (!participant.person) {
       retVal += '<li>A participant not running this app</li>';
     }
+    
     retVal += '<li>' + participant.person.displayName + '</li>';
-  }
+    j++;
+    }
 
   retVal += '</ul>';
 
   var div = document.getElementById('participantsDiv');
 
   div.innerHTML = retVal;
-  document.getElementById("No").innerHTML = NoOfParticipants;
-  //showVideoFeed();
+  showVideoFeed();
   
 }
+
+var buff;
+function showVideoFeed(){
+  var canvas = gapi.hangout.getVideoCanvas();
+  while(buff<participantsId)
+  { 
+    var feed = gapi.hangout.layout.createParticipantVideoFeed(participantId[i]);
+    canvas.setVideoFeed(feed);
+    canvas.setVisible(true);
+    buff++;
+    setTimeout(showVideoFeed(),5000);
+  }
+  
+
+}
+
 
  // When Gadget is ready...
   function init() {
@@ -54,6 +72,8 @@ function showParticipants() {
         if (eventObj.isApiReady) {
             console.log('API is Ready');
             showParticipants();
+            var current_participant_id=gapi.hangout.getParticipantId();
+            alert(current_participant_id);
            
   //When People leave a Hangout
   gapi.hangout.onParticipantsChanged.add(
