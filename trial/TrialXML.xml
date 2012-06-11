@@ -12,11 +12,10 @@
   <h3>Welcome to TalentSprint</h3>	
   <p id="participantsDiv">No Trainees joined</p> 
   <p id="Trainer">No Id</p>
-  <p id="No"></p>
+  <p id="No">Number</p>
 <script>	
 var NoOfParticipants=0;
 function showParticipants() {
-  ++NoOfParticipants;
   var participants = gapi.hangout.getParticipants();
   var retVal = '<h4>Trainees: </h4><ul>';
   var participantIds = gapi.hangout.participants.getParticipantId();
