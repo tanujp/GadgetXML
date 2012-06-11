@@ -19,9 +19,10 @@ function showParticipants() {
   ++NoOfParticipants;
   var participants = gapi.hangout.getParticipants();
   var retVal = '<h4>Trainees: </h4><ul>';
-  var participantId= gapi.hangout.getParticipantId();
+  var participantIds = gapi.hangout.participants.getParticipantId();
   for(var i=0;i<participants.length;i++){
     ++NoOfParticipants;
+    var participantId=participantsId[i];
     var participant = participants[i];
 
     if (!participant.person) {
