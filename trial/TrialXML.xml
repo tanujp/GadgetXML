@@ -18,7 +18,7 @@ function showParticipants() {
 
   var retVal = '<h4>Trainees: </h4><ul>';
 
-  for(var i=0;i<participants.length;i++){
+  for(var i=1;i<participants.length;i++){
     var participant = participants[i];
 
     if (!participant.person) {
@@ -45,7 +45,14 @@ function showParticipants() {
             console.log('API is Ready');
             showParticipants();
            
-        }
+  //When People leave a Hangout
+  gapi.hangout.onParticipantsChanged.add(
+      function(eventObj){
+      console.log('Participants Changed');
+      showParticipants();
+      }
+      
+        
       });
   }
 
