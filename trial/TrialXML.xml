@@ -12,17 +12,13 @@
   <h3>Welcome to TalentSprint</h3>	
   <p id="participantsDiv">No Trainees joined</p>   
 <script>	
-//refreshParticipantsList = function(event){
-//document.getElementById("participantsDiv").innerHTML=""
-//this.showParticipants();
-//}
 
 function showParticipants() {
   var participants = gapi.hangout.getParticipants();
 
   var retVal = '<h4>Trainees: </h4><ul>';
 
-  for(var i=1;i<clients.length;i++){
+  for(var i=1;i<participants.length;i++){
     var participant = participants[i];
 
     if (!participant.person) {
@@ -37,13 +33,18 @@ function showParticipants() {
 
   div.innerHTML = retVal;
 }
+
+ // When API is ready...
   function init() {
-  // When API is ready...                                                         
+  console.log('init');
+  
+  //When API is Ready
   gapi.hangout.onApiReady.add(
       function(eventObj) {
         if (eventObj.isApiReady) {
-            this.showParticipants();
-           gapi.hangout.onParticipantsChanged.add(this.showParticipants);
+            console.log('API is Ready');
+            showParticipants();
+           
         }
       });
   }
