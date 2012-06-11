@@ -12,13 +12,14 @@
   <h3>Welcome to TalentSprint</h3>	
   <p id="participantsDiv">No Trainees joined</p>   
 <script>	
-
+var NoOfParticipants;
 function showParticipants() {
   var participants = gapi.hangout.getParticipants();
 
   var retVal = '<h4>Trainees: </h4><ul>';
 
   for(var i=1;i<participants.length;i++){
+    ++NoOfParticipants;
     var participant = participants[i];
 
     if (!participant.person) {
@@ -32,6 +33,8 @@ function showParticipants() {
   var div = document.getElementById('participantsDiv');
 
   div.innerHTML = retVal;
+  
+  
 }
 
  // When API is ready...
@@ -50,7 +53,7 @@ function showParticipants() {
       function(eventObj){
       console.log('Participants Changed');
       showParticipants();
-      }
+      });
       
         
       });
