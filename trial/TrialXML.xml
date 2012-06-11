@@ -21,8 +21,8 @@ function showParticipants() {
 
   for(var i=0;i<participants.length;i++){
     ++NoOfParticipants;
-    var participantId = gapi.hangout.getParticipantId();
     var participant = participants[i];
+    var participantId = gapi.hangout.participant[i].getParticipantId();
 
     if (!participant.person) {
       retVal += '<li>A participant not running this app</li>';
