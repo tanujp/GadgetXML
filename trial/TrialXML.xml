@@ -15,7 +15,7 @@
 var NoOfParticipants;
 function showParticipants() {
   var participants = gapi.hangout.getParticipants();
-
+  var TrainerId = participants[0].getParticipantId();
   var retVal = '<h4>Trainees: </h4><ul>';
 
   for(var i=1;i<participants.length;i++){
@@ -34,10 +34,22 @@ function showParticipants() {
 
   div.innerHTML = retVal;
   
+  document.write(Trainer Id);
+  
+  //showVideoFeed();
   
 }
 
- // When API is ready...
+//function showVideoFeed(){
+
+//switch(NoOfParticipants)
+  //{
+   // Case 1 : 
+  //}
+
+//}
+
+ // When Gadget is ready...
   function init() {
   console.log('init');
   
