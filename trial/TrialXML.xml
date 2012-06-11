@@ -11,19 +11,22 @@
   <img src="https://github.com/tanujp/GadgetXML/raw/master/talent_sprint.gif"/>	 
   <h3>Welcome to TalentSprint</h3>	
   <p id="participantsDiv">No Trainees joined</p> 
-  <p id="Trainer">No Id</p>
   <p id="No">Number</p>
+
 <script>	
+
 var NoOfParticipants=0;
-var participantsId;
+var participantsId = new Array();
 function showParticipants() {
+  var j=0;
   var participants = gapi.hangout.getParticipants();
   var retVal = '<h4>Trainees: </h4><ul>';
- 
- for(var i=0;i<participants.length;i++){
+  var TrainerId = participants[0].id;
+  for(var i=1;i<participants.length;i++){
     ++NoOfParticipants;
     var participant = participants[i];
-    var participantId = participant.id;
+    
+  var participantsId[j] = participant.id;
     
     if (!participant.person) {
       retVal += '<li>A participant not running this app</li>';
@@ -37,7 +40,6 @@ function showParticipants() {
 
   div.innerHTML = retVal;
   document.getElementById("No").innerHTML = NoOfParticipants;
-  document.getElemenetById("Trainer").innerHTML=participantId;
   //showVideoFeed();
   
 }
