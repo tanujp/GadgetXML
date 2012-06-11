@@ -14,7 +14,7 @@
   <p id="Trainer">No Id</p>
   <p id="No"></p>
 <script>	
-var NoOfParticipants;
+var NoOfParticipants=0;
 function showParticipants() {
   ++NoOfParticipants;
   var participants = gapi.hangout.getParticipants();
