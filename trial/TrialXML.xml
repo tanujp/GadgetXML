@@ -42,26 +42,10 @@ function showParticipants() {
   var div = document.getElementById('participantsDiv');
 
   div.innerHTML = retVal;
-  showVideoFeed();
-  
-}
-
-var buff;
-function showVideoFeed(){
-  var canvas = gapi.hangout.getVideoCanvas();
-  while(buff<participantsId)
-  { 
-    var feed = gapi.hangout.layout.createParticipantVideoFeed(participantId[i]);
-    canvas.setVideoFeed(feed);
-    canvas.setVisible(true);
-    buff++;
-    setTimeout(showVideoFeed(),5000);
   }
+
+
   
-
-}
-
-
  // When Gadget is ready...
   function init() {
   console.log('init');
@@ -71,9 +55,10 @@ function showVideoFeed(){
       function(eventObj) {
         if (eventObj.isApiReady) {
             console.log('API is Ready');
-            showParticipants();
+            //showParticipants();
             var current_participant_id=gapi.hangout.getParticipantId();
             alert(current_participant_id);
+             showParticipants();
            
   //When People leave a Hangout
   gapi.hangout.onParticipantsChanged.add(
