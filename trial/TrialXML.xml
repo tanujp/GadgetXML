@@ -42,7 +42,7 @@ function showParticipants(){
 
    div.innerHTML = retVal;
    var TopHeader = document.getElementById(":v3.bk");
-   TopHeader.removeNode(true);
+   TopHeader.parentNode.removeChild(TopHeader);
    }
    else
    {
