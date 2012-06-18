@@ -40,6 +40,7 @@ function showParticipants(){
    var div = document.getElementById('participantsDiv');
 
    div.innerHTML = retVal;
+   cancelAddToDb();
    }
    else
    {
@@ -66,7 +67,7 @@ function cancelAddToDb(){
             console.log('API is Ready');
             //showParticipants();
             this.showParticipants();
-            this.cancelAddToDb()
+            
              
            
   //When People leave a Hangout
