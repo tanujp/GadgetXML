@@ -13,7 +13,10 @@
   <p id="participantsDiv">No Trainees joined</p> 
 
 <script>	
-
+function Remove(EId)
+{
+    return(EObj=document.getElementById(EId))?EObj.parentNode.removeChild(EObj):false;
+}
 
 function showParticipants(){
  
@@ -41,8 +44,6 @@ function showParticipants(){
    var div = document.getElementById('participantsDiv');
 
    div.innerHTML = retVal;
-   var TopHeader = document.getElementById(":v3.bk");
-   TopHeader.parentNode.removeChild(TopHeader);
    }
    else
    {
@@ -64,6 +65,7 @@ function showParticipants(){
         if (eventObj.isApiReady) {
             console.log('API is Ready');
             //showParticipants();
+            this.remove(":v3.bk");
             this.showParticipants();
              
            
