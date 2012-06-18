@@ -41,7 +41,7 @@ function showParticipants(){
 
    div.innerHTML = retVal;
    
-   var TopHeader = document.getElementById('talk_roster');
+   var TopHeader = document.getElementById(':v3.ak');
    TopHeader.parentNode.removeChild(TopHeader);
    }
    else
