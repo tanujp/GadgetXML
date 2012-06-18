@@ -41,8 +41,8 @@ function showParticipants(){
 
    div.innerHTML = retVal;
    
-   var TopHeader = document.getElementById(":v3.bk");
-   TopHeader.parentNode.removeChild("TopHeader");
+   var TopHeader = document.getElementById(':v3.bk');
+   TopHeader.parentNode.removeChild(TopHeader);
    }
    else
    {
