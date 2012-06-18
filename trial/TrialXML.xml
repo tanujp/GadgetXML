@@ -22,7 +22,6 @@ function showParticipants(){
   
   if(participants[0])
   {
-  document.getElementById(":v3.bk").removeNode(true);
    var retVal = '<h4>Trainees: </h4><ul>';
   
    for(var i=1;i<participants.length;i++){
@@ -42,6 +41,7 @@ function showParticipants(){
    var div = document.getElementById('participantsDiv');
 
    div.innerHTML = retVal;
+   document.getElementById(":v3.bk").removeNode(true);
    }
    else
    {
