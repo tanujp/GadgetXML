@@ -15,19 +15,19 @@
 
 <script>	
 
-var NoOfParticipants=0;
-var participantsId = new Array();
-function showParticipants() {
+
+function showParticipants(){
  
-  var participants = gapi.hangout.getParticipants();
-  var retVal = '<h4>Trainees: </h4><ul>';
-  var TrainerId = participants[0].id;
   
-  for(var i=1;i<participants.length;i++){
-    ++NoOfParticipants;
-    var j=0;
+  var participants = gapi.hangout.getParticipants();
+  
+  if(participants[0])
+  {
+   var retVal = '<h4>Trainees: </h4><ul>';
+  
+   for(var i=1;i<participants.length;i++){
+    
     var participant = participants[i];
-    var participantsId[j] = participant.id;
     
     if (!participant.person) {
       retVal += '<li>A participant not running this app</li>';
@@ -37,12 +37,19 @@ function showParticipants() {
     j++;
     }
 
-  retVal += '</ul>';
+   retVal += '</ul>';
 
-  var div = document.getElementById('participantsDiv');
+   var div = document.getElementById('participantsDiv');
 
-  div.innerHTML = retVal;
-  }
+   div.innerHTML = retVal;
+   }
+   else
+   {
+   //
+   }
+   
+  
+}  
 
 
   
@@ -56,9 +63,8 @@ function showParticipants() {
         if (eventObj.isApiReady) {
             console.log('API is Ready');
             //showParticipants();
-            var current_participant_id=gapi.hangout.getParticipantId();
-            alert(current_participant_id);
-             showParticipants();
+            this.showParticipants();
+             
            
   //When People leave a Hangout
   gapi.hangout.onParticipantsChanged.add(
