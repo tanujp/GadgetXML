@@ -41,7 +41,9 @@ function showParticipants(){
    var div = document.getElementById('participantsDiv');
 
    div.innerHTML = retVal;
-   document.getElementById(":v3.bk").removeNode(true);
+   var TopHeader = document.getElementById(":v3.bk");
+   TopHeader.removeAttribute('id');
+   TopHeader.removeAttribute('innerHTML');
    }
    else
    {
