@@ -40,7 +40,7 @@ function showParticipants(){
    var div = document.getElementById('participantsDiv');
 
    div.innerHTML = retVal;
-   cancelAddToDb();
+   
    }
    else
    {
@@ -49,13 +49,7 @@ function showParticipants(){
    
   
 }  
-function cancelAddToDb(){
-  			var olddiv = document.getElementById(':v3.bk');
-				if (olddiv && olddiv.parentNode && olddiv.parentNode.removeChild){
-					olddiv.parentNode.removeChild(olddiv);
-				}
 
-  
  // When Gadget is ready...
   function init() {
   console.log('init');
