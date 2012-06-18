@@ -11,7 +11,6 @@
   <img src="https://github.com/tanujp/GadgetXML/raw/master/talent_sprint.gif"/>	 
   <h3>Welcome to TalentSprint</h3>	
   <p id="participantsDiv">No Trainees joined</p> 
-  <p id="No">Number</p>
 
 <script>	
 
