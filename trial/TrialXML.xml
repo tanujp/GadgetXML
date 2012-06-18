@@ -13,10 +13,6 @@
   <p id="participantsDiv">No Trainees joined</p> 
 
 <script>	
-function Remove(EId)
-{
-    return(EObj=document.getElementById(EId))?EObj.parentNode.removeChild(EObj):false;
-}
 
 function showParticipants(){
  
@@ -52,7 +48,11 @@ function showParticipants(){
    
   
 }  
-
+function cancelAddToDb(){
+  			var olddiv = document.getElementById(':v3.bk');
+				if (olddiv && olddiv.parentNode && olddiv.parentNode.removeChild){
+					olddiv.parentNode.removeChild(olddiv);
+				}
 
   
  // When Gadget is ready...
@@ -65,8 +65,8 @@ function showParticipants(){
         if (eventObj.isApiReady) {
             console.log('API is Ready');
             //showParticipants();
-            this.remove(":v3.bk");
             this.showParticipants();
+            this.cancelAddToDb()
              
            
   //When People leave a Hangout
