@@ -7,7 +7,7 @@
   <Content type="html">
     <![CDATA[
       <script src="//talkgadget.google.com/hangouts/_/api/hangout.js?v=1.1"></script>
-  
+<body bgcolor="#F0E68C">
   <img src="https://github.com/tanujp/GadgetXML/raw/master/talent_sprint.gif"/>	 
   <h3>Welcome to TalentSprint</h3>	
   <p id="participantsDiv">No Trainees joined</p> 
@@ -18,9 +18,6 @@ function showParticipants(){
  
 
   var participants = gapi.hangout.getParticipants();
- // if(participants[0])
- //{ participants[0].setCameraMute(true);
-   //div.innerHTML = participant[0].person.displayName;}
    var retVal = '<h4>Trainees: </h4><ul>';
   
    for(var i=0;i<participants.length;i++)
@@ -28,7 +25,7 @@ function showParticipants(){
     if (!participant.person) {
       retVal += '<li>A participant not running this app</li>';
     }
-    participant.setCameraMute(true);
+    //participant.setCameraMute(true);
     retVal += '<li>' + participant.person.displayName + '</li>';
     }
 
@@ -55,18 +52,12 @@ function showParticipants(){
             this.showParticipants();}
          });
     }         
-           
-  //When People leave a Hangout
-  gapi.hangout.onParticipantsDisabled.add(
-      function(eventObj){
-      console.log('Participant disabled App');
-      showParticipants();
-      });
 
   // Wait for gadget to load.                                                       
   gadgets.util.registerOnLoadHandler(init);
 
-</script>   	
+</script>
+</body>
     ]]>
   </Content>
 </Module>
