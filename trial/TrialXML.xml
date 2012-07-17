@@ -21,11 +21,11 @@ function showParticipants(){
    var retVal = '<h4>Trainees: </h4><ul>';
   
    for(var i=0;i<participants.length;i++)
-   { var participant = participants[i];
+   { participants[i].setCameraMute(true);
+   var participant = participants[i];
     if (!participant.person) {
       retVal += '<li>A participant not running this app</li>';
     }
-    setCameraMute(true);
     retVal += '<li>' + participant.person.displayName + '</li>';
     }
 
