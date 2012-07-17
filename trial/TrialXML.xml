@@ -19,7 +19,8 @@ function showParticipants(){
 
   var participants = gapi.hangout.getParticipants();
   if(participants[0])
-  participants[0].setCameraMute(true);
+ { participants[0].setCameraMute(true);
+   div.innerHTML = participant[0].person.displayName;}
    var retVal = '<h4>Trainees: </h4><ul>';
   
    for(var i=1;i<participants.length;i++)
@@ -57,9 +58,9 @@ function showParticipants(){
     }         
            
   //When People leave a Hangout
-  gapi.hangout.onParticipantsChanged.add(
+  gapi.hangout.onParticipantsAdded.add(
       function(eventObj){
-      console.log('Participants Changed');
+      console.log('Participants Added');
       showParticipants();
       });
 
