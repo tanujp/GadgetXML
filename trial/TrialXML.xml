@@ -37,7 +37,7 @@ function showParticipants(){
    
    //var TopHeader = document.getElementById(':v3.ak');
    //TopHeader.parentNode.removeChild(TopHeader);
-   
+ 
 }  
 
  // When Gadget is ready...
