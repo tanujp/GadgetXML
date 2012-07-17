@@ -52,8 +52,7 @@ function showParticipants(){
       function(eventObj) {
         if (eventObj.isApiReady) {
             console.log('API is Ready');
-            //showParticipants();
-            this.showParticipants();
+            showParticipants();
             
              
            
