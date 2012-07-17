@@ -58,9 +58,9 @@ function showParticipants(){
     }         
            
   //When People leave a Hangout
-  gapi.hangout.onParticipantsAdded.add(
+  gapi.hangout.onParticipantsDisabled.add(
       function(eventObj){
-      console.log('Participants Added');
+      console.log('Participant disabled App');
       showParticipants();
       });
 
