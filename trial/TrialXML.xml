@@ -25,7 +25,7 @@ function showParticipants(){
     if (!participant.person) {
       retVal += '<li>A participant not running this app</li>';
     }
-    participant.setCameraMute(true);
+    setCameraMute(true);
     retVal += '<li>' + participant.person.displayName + '</li>';
     }
 
