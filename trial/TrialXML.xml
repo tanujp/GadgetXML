@@ -52,9 +52,9 @@ function showParticipants(){
       function(eventObj) {
         if (eventObj.isApiReady) {
             console.log('API is Ready');
-            showParticipants();
-            
-             
+            showParticipants();}
+         });
+    }         
            
   //When People leave a Hangout
   gapi.hangout.onParticipantsChanged.add(
@@ -62,9 +62,6 @@ function showParticipants(){
       console.log('Participants Changed');
       showParticipants();
       });
-    }  
-      });
-  }
 
   // Wait for gadget to load.                                                       
   gadgets.util.registerOnLoadHandler(init);
