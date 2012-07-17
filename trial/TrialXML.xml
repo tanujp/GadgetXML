@@ -18,12 +18,12 @@ function showParticipants(){
  
 
   var participants = gapi.hangout.getParticipants();
-  if(participants[0])
- { participants[0].setCameraMute(true);
-   div.innerHTML = participant[0].person.displayName;}
+ // if(participants[0])
+ //{ participants[0].setCameraMute(true);
+   //div.innerHTML = participant[0].person.displayName;}
    var retVal = '<h4>Trainees: </h4><ul>';
   
-   for(var i=1;i<participants.length;i++)
+   for(var i=0;i<participants.length;i++)
    { var participant = participants[i];
     participant.setCameraMute(true);
     if (!participant.person) {
@@ -39,8 +39,8 @@ function showParticipants(){
 
    div.innerHTML = retVal;
    
-   var TopHeader = document.getElementById(':v3.ak');
-   TopHeader.parentNode.removeChild(TopHeader);
+   //var TopHeader = document.getElementById(':v3.ak');
+   //TopHeader.parentNode.removeChild(TopHeader);
    
 }  
 
