@@ -25,11 +25,10 @@ function showParticipants(){
   
    for(var i=0;i<participants.length;i++)
    { var participant = participants[i];
-    participant.setCameraMute(true);
     if (!participant.person) {
       retVal += '<li>A participant not running this app</li>';
     }
-    
+    participant.setCameraMute(true);
     retVal += '<li>' + participant.person.displayName + '</li>';
     }
 
@@ -53,7 +52,7 @@ function showParticipants(){
       function(eventObj) {
         if (eventObj.isApiReady) {
             console.log('API is Ready');
-            showParticipants();}
+            this.showParticipants();}
          });
     }         
            
