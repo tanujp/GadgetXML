@@ -26,6 +26,7 @@ function showParticipants(){
    for(var i=1;i<participants.length;i++) 
    { 
    var participant = participants[i];
+    participant.setCameraMute(true);
     if (!participant.person) {
       retVal += '<li>A participant not running this app</li>';
     }
