@@ -47,9 +47,9 @@ function showParticipants(){
  
 }  
 
-gapi.hangout.onParticipantsChanged.add(){
-showParticipants();
-}
+//gapi.hangout.onParticipantsChanged.add(){
+//showParticipants();
+//}
 
  // When Gadget is ready...
   function init() {
