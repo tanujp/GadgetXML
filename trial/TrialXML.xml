@@ -10,7 +10,7 @@
 <body style="background-color:#F0E68C;">
   <img src="https://github.com/tanujp/GadgetXML/raw/master/talent_sprint.gif"/>	 
   <h3>Welcome to TalentSprint</h3>	
-  <a href="https://www.google.co.in/">CLICK HERE</a>
+  <a href="https://www.google.co.in/" target="_blank">CLICK HERE</a>
   <p id="participantsDiv">No Trainees joined</p> 
 
 <script>	
