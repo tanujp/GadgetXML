@@ -25,7 +25,7 @@ function showParticipants(){
   //if(participants[0])
   //{participants[0].setCameraMute(true);}
   
-   for(var i=1;i<participants.length;i++) 
+   for(var i=0;i<participants.length;i++) 
    { 
    var participant = participants[i];
 
