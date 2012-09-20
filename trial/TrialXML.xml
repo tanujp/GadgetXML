@@ -22,42 +22,8 @@ window.open("https://www.google.co.in/","NEW WINDOW",'toolbar=no,resizable = no,
 </script>
 
 <script>	
-
-var personIds;
-
-function showParticipants(){
- 
-  var j = 0;
-  var participants = gapi.hangout.getParticipants();
-   var retVal = '<h4>Trainees: </h4><ul>';
-  
-  //if(participants[0])
-  //{participants[0].setCameraMute(true);}
-  
-   for(var i=0;i<participants.length;i++) 
-   { 
-   var participant = participants[i];
-
-    if (!participant.person) {
-      retVal += '<li>A participant not running this app</li>';
-    }
-    
-    retVal += '<li>' + participant.person.displayName + participant.person.id + '</li>';
-    }
-
-   retVal += '</ul>';
-
-   var div = document.getElementById('participantsDiv');
-
-   div.innerHTML = retVal;
-   
-   //var TopHeader = document.getElementById(':v3.ak');
-   //TopHeader.parentNode.removeChild(TopHeader);
- 
-}  
-
-gapi.hangout.onParticipantsDisabled.add(){
-showParticipants();
+check_for_trainer(){
+setCameraMute(true);
 }
 
  // When Gadget is ready...
@@ -69,7 +35,7 @@ showParticipants();
       function(eventObj) {
         if (eventObj.isApiReady) {
             console.log('API is Ready');
-            this.showParticipants();}
+            check_for_trainer();}
          });
   Time_Check();
     }         
@@ -122,6 +88,7 @@ setTimeout(Time_Check,15000);
   gadgets.util.registerOnLoadHandler(init);
 
 </script>
+<embed id="http://localhost:8080/examples/jsp/TestSender2.swf" width="100%" height="100%">
 </body>
     ]]>
   </Content>
