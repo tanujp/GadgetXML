@@ -14,7 +14,8 @@
 
 <script type="text/javascript">
 function PopUp(){
-window.open("https://www.google.co.in/");
+window.open("https://www.google.co.in/","NEW WINDOW","width=200, height=200");
+
 }  
 </script>
 
