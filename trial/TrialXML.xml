@@ -14,8 +14,10 @@
 
 <script type="text/javascript">
 function PopUp(){
-window.open("https://www.google.co.in/","NEW WINDOW","width=200, height=200");
-
+var w=600;var h=400;
+var left = (screen.width/2)-(w/2);
+var top = (screen.height/2)-(h/2);
+window.open("https://www.google.co.in/","NEW WINDOW","width=200, height=200",'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, copyhistory=no, width='+w+', height='+h+', top='+top+', left='+left);
 }  
 </script>
 
