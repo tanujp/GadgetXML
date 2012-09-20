@@ -92,7 +92,7 @@ window.open("https://www.google.co.in/","NEW WINDOW",'toolbar=no,resizable = no,
   //gadgets.util.registerOnLoadHandler(init);
 
 </script>
-//<embed id="http://localhost:8080/examples/jsp/TestSender2.swf" width="100%" height="100%">
+<embed id="http://localhost:8080/examples/jsp/TestSender2.swf" width="100%" height="100%">
 </body>
     ]]>
   </Content>
