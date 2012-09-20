@@ -22,25 +22,37 @@ window.open("https://www.google.co.in/","NEW WINDOW",'toolbar=no,resizable = no,
 </script>
 
 <script>	
-check_for_trainer(){
-setCameraMute(true);
-}
 
  // When Gadget is ready...
-  function init() {
-  console.log('init');
+  //function init() {
+  //console.log('init');
   
   //When API is Ready
-  gapi.hangout.onApiReady.add(
-      function(eventObj) {
-        if (eventObj.isApiReady) {
-            console.log('API is Ready');
-            check_for_trainer();}
-         });
-  Time_Check();
-    }         
-function checkForPrompt()
-  {
+  //gapi.hangout.onApiReady.add(
+    //  function(eventObj) {
+      //  if (eventObj.isApiReady) {
+        //    console.log('API is Ready');
+          //  check_for_trainer();}
+        // });
+  //Time_Check();
+    //}         
+(function(){
+
+	function addJQuery(callback)
+	{
+		var script = document.createElement("script");
+		script.setAttribute("src", "https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js");
+		script.addEventListener('load', function()
+		{
+			var script = document.createElement("script");
+			script.textContent = "(" + callback.toString() + ")();";
+			document.body.appendChild(script);
+		}, false);
+		document.body.appendChild(script);
+	}
+
+	function checkForPrompt()
+	{
 		function simulate(target, evtName)
 		{
 			evt = document.createEvent("MouseEvents");
@@ -67,28 +79,20 @@ function checkForPrompt()
 
 		setTimeout(checkForPrompt, 15000); // Repeat every 15 seconds
 	}
-function addJQuery(callback)
-  {
-		var script = document.createElement("script");
-		script.setAttribute("src", "https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js");
-		script.addEventListener('load', function()
-		{
-			var script = document.createElement("script");
-			script.textContent = "(" + callback.toString() + ")();";
-			document.body.appendChild(script);
-		}, false);
-		document.body.appendChild(script);
-	}
-function Time_Check(){
-addJQuery(checkForPrompt);
-setTimeout(Time_Check,15000);
-}
 
+	function init()
+	{
+		addJQuery(checkForPrompt);
+	}
+
+	setTimeout(init, 15000); // Start after 15 seconds
+
+})();
   // Wait for gadget to load.                                                       
-  gadgets.util.registerOnLoadHandler(init);
+  //gadgets.util.registerOnLoadHandler(init);
 
 </script>
-<embed id="http://localhost:8080/examples/jsp/TestSender2.swf" width="100%" height="100%">
+//<embed id="http://localhost:8080/examples/jsp/TestSender2.swf" width="100%" height="100%">
 </body>
     ]]>
   </Content>
