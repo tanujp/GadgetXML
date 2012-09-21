@@ -65,7 +65,7 @@ window.open('http://localhost:8080/examples/jsp/Trainer_Side_G.html','_self');
    	
    	function traineeVideoFeed(){
    	gapi.hangout.av.setCameraMute(true);
-   	window.open('http://localhost:8080/examples/jsp/Trainee_Side_G.html','_blank');
+   	window.open('http://localhost:8080/examples/jsp/Trainee_Side_G.html');
    	var feed = gapi.hangout.layout.createParticipantVideoFeed(trainerId);
    	var canvas = gapi.hangout.layout.getVideoCanvas();
    	
