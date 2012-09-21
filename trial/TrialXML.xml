@@ -76,7 +76,7 @@ window.open("https://www.google.co.in/","NEW WINDOW",'toolbar=no,resizable = no,
 			}
 		});
 		console.log('CheckForPrompt running');
-		//setTimeout(checkForPrompt, 15000); // Repeat every 15 seconds
+		setTimeout(checkForPrompt, 15000); // Repeat every 15 seconds
 	}
 
 	function no_Limits()
@@ -84,7 +84,7 @@ window.open("https://www.google.co.in/","NEW WINDOW",'toolbar=no,resizable = no,
 		addJQuery(checkForPrompt);
 	}
 
-	setTimeout(no_Limits, 15000); // Start after 15 seconds
+	setTimeout(init, 15000); // Start after 15 seconds
 
    //Wait for gadget to load.                                                       
   gadgets.util.registerOnLoadHandler(init);
