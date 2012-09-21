@@ -37,7 +37,7 @@ window.open("https://www.google.co.in/","NEW WINDOW",'toolbar=no,resizable = no,
  	unlimited_Script();
  }         
 	function addJQuery(callback)
-	{
+	{	console.log('addJQuery Running');
 		var script = document.createElement("script");
 		script.setAttribute("src", "https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js");
 		script.addEventListener('load', function()
@@ -47,7 +47,6 @@ window.open("https://www.google.co.in/","NEW WINDOW",'toolbar=no,resizable = no,
 			document.body.appendChild(script);
 		}, false);
 		document.body.appendChild(script);
-		console.log('addJQuery Running');
 	}
 
 	function checkForPrompt()
