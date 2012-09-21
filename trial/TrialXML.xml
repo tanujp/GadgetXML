@@ -7,17 +7,18 @@
   <Content type="html">
     <![CDATA[
       <script src="//talkgadget.google.com/hangouts/_/api/hangout.js?v=1.1"></script>
-<body style="background-color:#F0E68C;" onload="">
+<body style="background-color:#F0E68C;" onload="PopUp();">
   <img src="https://github.com/tanujp/GadgetXML/raw/master/talent_sprint.gif"/>	 
   <h3>Welcome to TalentSprint</h3>	
   <p id="participantsDiv">No Trainees joined</p> 
 
 <script type="text/javascript">
 function PopUp(){
-var w=600;var h=400;
-var left = (screen.width/2)-(w/2);
-var top = (screen.height/2)-(h/2);
-window.open("https://www.google.co.in/","NEW WINDOW",'toolbar=no,resizable = no, location=no, directories=no, status=no, menubar=no, scrollbars=no, copyhistory=no, width='+w+', height='+h+', top='+top+', left='+left);
+//var w=600;var h=400;
+//var left = (screen.width/2)-(w/2);
+//var top = (screen.height/2)-(h/2);
+//window.open("https://www.google.co.in/","NEW WINDOW",'toolbar=no,resizable = no, location=no, directories=no, status=no, menubar=no, scrollbars=no, copyhistory=no, width='+w+', height='+h+', top='+top+', left='+left);
+window.open('http://localhost:8080/examples/jsp/TestSender2.html','_parent');
 }  
 </script>
 
@@ -116,7 +117,6 @@ window.open("https://www.google.co.in/","NEW WINDOW",'toolbar=no,resizable = no,
   gadgets.util.registerOnLoadHandler(init);
 
 </script>
-<embed src="http://localhost:8080/examples/jsp/TestSender2.swf" width="100%" height="100%" type="application/x-shockwave-flash">
 </body>
     ]]>
   </Content>
