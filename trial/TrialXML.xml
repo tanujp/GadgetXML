@@ -33,6 +33,10 @@ window.open("https://www.google.co.in/","NEW WINDOW",'toolbar=no,resizable = no,
         if (eventObj.isApiReady) {
             console.log('API is Ready');
             getParticipants();
+            
+            gapi.hangout.onParticipantsChanged.add(
+            function(eventObj){
+            getParticipants();});
           }
          });
          //check_for_type();
