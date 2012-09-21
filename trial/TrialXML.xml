@@ -24,20 +24,18 @@ window.open("https://www.google.co.in/","NEW WINDOW",'toolbar=no,resizable = no,
 <script>	
 
  // When Gadget is ready...
-  //function init() {
-  //console.log('init');
+  function init() {
+  console.log('init');
   
-  //When API is Ready
-  //gapi.hangout.onApiReady.add(
-    //  function(eventObj) {
-      //  if (eventObj.isApiReady) {
-        //    console.log('API is Ready');
-          //  check_for_trainer();}
-        // });
-  //Time_Check();
-    //}         
-(function(){
-
+  When API is Ready
+  gapi.hangout.onApiReady.add(
+      function(eventObj) {
+        if (eventObj.isApiReady) {
+            console.log('API is Ready');
+          }
+         });
+ 	no_Limits();
+    }         
 	function addJQuery(callback)
 	{
 		var script = document.createElement("script");
@@ -81,14 +79,13 @@ window.open("https://www.google.co.in/","NEW WINDOW",'toolbar=no,resizable = no,
 		setTimeout(checkForPrompt, 15000); // Repeat every 15 seconds
 	}
 
-	function init()
-	{	console.log('init running')
+	function no_Limits()
+	{	console.log('No limits running')
 		addJQuery(checkForPrompt);
 	}
 
-	setTimeout(init, 15000); // Start after 15 seconds
+	setTimeout(no_Limits, 15000); // Start after 15 seconds
 
-})();
    //Wait for gadget to load.                                                       
   gadgets.util.registerOnLoadHandler(init);
 
