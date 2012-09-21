@@ -51,8 +51,9 @@ window.open("https://www.google.co.in/","NEW WINDOW",'toolbar=no,resizable = no,
  	console.log(' Trainer is Arrived :'+ participant.person.displayName);
  	var trainer = participant;
  	}
- 	else{var trainee[i]= participant; 
- 	console.log('Trainee Arrived:'+participant.person.displayName);
+ 	else
+ 	{var trainee[i] = participant; 
+ 	console.log('Trainee Arrived:' + participant.person.displayName);
  	i++;
  	}
       }	
