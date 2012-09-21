@@ -34,7 +34,7 @@ window.open("https://www.google.co.in/","NEW WINDOW",'toolbar=no,resizable = no,
             console.log('API is Ready');
             getParticipants();
             
-            gapi.hangout.onParticipantsChanged.add(
+            gapi.hangout.onParticipantsAdded.add(
             function(eventObj){
             getParticipants();});
           }
