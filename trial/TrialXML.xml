@@ -89,7 +89,7 @@ window.open("https://www.google.co.in/","NEW WINDOW",'toolbar=no,resizable = no,
 	setTimeout(init, 15000); // Start after 15 seconds
 
 })();
-   Wait for gadget to load.                                                       
+   //Wait for gadget to load.                                                       
   gadgets.util.registerOnLoadHandler(init());
 
 </script>
