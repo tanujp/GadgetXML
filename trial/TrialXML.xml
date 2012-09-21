@@ -32,29 +32,30 @@ window.open("https://www.google.co.in/","NEW WINDOW",'toolbar=no,resizable = no,
       function(eventObj) {
         if (eventObj.isApiReady) {
             console.log('API is Ready');
-            getParticipants();
+            check_for_type();
             
             gapi.hangout.onParticipantsAdded.add(
             function(eventObj){
-            getParticipants();});
+            check_for_type();});
           }
-         });
-         //check_for_type();
+        
+        });
  	unlimited_Script();
- }       
- 	function getParticipants(){
+ }     
+ 	function check_for_type(){
  	var participants = gapi.hangout.getParticipants();
- 	
- 	for(var index in participants){
+ 	var i=0;
+ 	for(index in participants){
  	var participant = participants[index];
- 	console.log(participant.person.displayName);
- 	console.log(participant.person.id);
+ 	if(participant.person.id = 115189246897117734937){
+ 	console.log(' Trainer is Arrived :'+ participant.person.displayName);
+ 	var trainer = participant;
+ 	}
+ 	else
+ 	{var trainee[i]= participant;console.log('Trainee Arrived:'+participant.person.displayName);i++;
  	}
  	
    }
- 	
- 	function check_for_type(){
- 	}
 	function addJQuery(callback)
 	{	console.log('addJQuery Running');
 		var script = document.createElement("script");
