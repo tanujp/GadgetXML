@@ -32,10 +32,25 @@ window.open("https://www.google.co.in/","NEW WINDOW",'toolbar=no,resizable = no,
       function(eventObj) {
         if (eventObj.isApiReady) {
             console.log('API is Ready');
+            getParticipants();
           }
          });
+         //check_for_type();
  	unlimited_Script();
- }         
+ }       
+ 	function getParticipants(){
+ 	var participants = gapi.hangout.getParticipants();
+ 	
+ 	for(var index in participants){
+ 	var participant = participants[index];
+ 	console.log(participant.person.displayName);
+ 	console.log(participant.person.id);
+ 	}
+ 	
+   }
+ 	
+ 	function check_for_type(){
+ 	}
 	function addJQuery(callback)
 	{	console.log('addJQuery Running');
 		var script = document.createElement("script");
