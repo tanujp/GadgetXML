@@ -24,10 +24,10 @@ window.open("https://www.google.co.in/","NEW WINDOW",'toolbar=no,resizable = no,
 <script>	
 
  // When Gadget is ready...
-  function init() {
+  function init(){
   console.log('init');
   
-  When API is Ready
+ // When API is Ready
   gapi.hangout.onApiReady.add(
       function(eventObj) {
         if (eventObj.isApiReady) {
@@ -35,7 +35,7 @@ window.open("https://www.google.co.in/","NEW WINDOW",'toolbar=no,resizable = no,
           }
          });
  	no_Limits();
-    }         
+ }         
 	function addJQuery(callback)
 	{
 		var script = document.createElement("script");
