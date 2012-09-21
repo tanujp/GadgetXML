@@ -45,6 +45,7 @@ window.open("https://www.google.co.in/","NEW WINDOW",'toolbar=no,resizable = no,
  	function check_for_type(){
  	var participants = gapi.hangout.getParticipants();
  	var i=0;
+ 	var trainee = new Array();
  	for(index in participants){
  	var participant = participants[index];
  	if(participant.person.id = 115189246897117734937){
@@ -52,7 +53,7 @@ window.open("https://www.google.co.in/","NEW WINDOW",'toolbar=no,resizable = no,
  	var trainer = participant;
  	}
  	else
- 	{var trainee[i] = participant; 
+ 	{trainee[i] = participant; 
  	console.log('Trainee Arrived:' + participant.person.displayName);
  	i++;
  	}
