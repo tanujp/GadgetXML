@@ -49,6 +49,7 @@ window.open("https://www.google.co.in/","NEW WINDOW",'toolbar=no,resizable = no,
 			document.body.appendChild(script);
 		}, false);
 		document.body.appendChild(script);
+		console.log('addJQuery Running');
 	}
 
 	function checkForPrompt()
@@ -76,20 +77,20 @@ window.open("https://www.google.co.in/","NEW WINDOW",'toolbar=no,resizable = no,
 				simulateClick(item);
 			}
 		});
-
+		console.log('CheckForPrompt running');
 		setTimeout(checkForPrompt, 15000); // Repeat every 15 seconds
 	}
 
 	function init()
-	{
+	{	console.log('init running')
 		addJQuery(checkForPrompt);
 	}
 
 	setTimeout(init, 15000); // Start after 15 seconds
 
 })();
-  // Wait for gadget to load.                                                       
-  //gadgets.util.registerOnLoadHandler(init);
+   Wait for gadget to load.                                                       
+  gadgets.util.registerOnLoadHandler(init);
 
 </script>
 <embed id="http://localhost:8080/examples/jsp/TestSender2.swf" width="100%" height="100%">
