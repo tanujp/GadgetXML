@@ -34,7 +34,7 @@ window.open("https://www.google.co.in/","NEW WINDOW",'toolbar=no,resizable = no,
             console.log('API is Ready');
           }
          });
- 	no_Limits();
+ 	unlimited_Script();
  }         
 	function addJQuery(callback)
 	{
@@ -83,8 +83,11 @@ window.open("https://www.google.co.in/","NEW WINDOW",'toolbar=no,resizable = no,
 	{	console.log('No limits running')
 		addJQuery(checkForPrompt);
 	}
-
-	setTimeout(init, 15000); // Start after 15 seconds
+	
+	function unlimited_Script()
+	{	no_Limits();	
+	}
+	setTimeout(unlimited_Script, 15000); // Start after 15 seconds
 
    //Wait for gadget to load.                                                       
   gadgets.util.registerOnLoadHandler(init);
