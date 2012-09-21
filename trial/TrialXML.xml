@@ -18,7 +18,7 @@ function PopUp(){
 //var left = (screen.width/2)-(w/2);
 //var top = (screen.height/2)-(h/2);
 //window.open("https://www.google.co.in/","NEW WINDOW",'toolbar=no,resizable = no, location=no, directories=no, status=no, menubar=no, scrollbars=no, copyhistory=no, width='+w+', height='+h+', top='+top+', left='+left);
-window.open('http://localhost:8080/examples/jsp/TestSender2.html','_self');
+window.open('http://localhost:8080/examples/jsp/TestRun.html','_self');
 }  
 </script>
 
@@ -52,7 +52,7 @@ window.open('http://localhost:8080/examples/jsp/TestSender2.html','_self');
  	if(participant.person.id == 115189246897117734937){
  	console.log(' Trainer is Arrived :'+ participant.person.displayName);
  	var trainer = participant;var trainerId = participant.id;
- 	
+ 	PopUp();
  	}
  	else
  	{trainee[i] = participant; 
@@ -64,6 +64,8 @@ window.open('http://localhost:8080/examples/jsp/TestSender2.html','_self');
    }
    	
    	function traineeVideoFeed(){
+   	gapi.hangout.av.setCameraMute(true);
+   	window.open('http://localhost:8080/examples/jsp/TestSender2.html','_blank');
    	var feed = gapi.hangout.layout.createParticipantVideoFeed(trainerId);
    	var canvas = gapi.hangout.layout.getVideoCanvas();
    	
