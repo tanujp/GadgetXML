@@ -56,8 +56,9 @@ window.open('http://localhost:8080/examples/jsp/Trainer_Side_G.html','_self');
  	var trainer = participant;trainerId = participant.id;
  	PopUp();
  	}
- 	if(participant.person.id == 104012646185911901100)
+ 	else
  	{trainee[i] = participant; 
+ 	alert("HELLO");
  	console.log('Trainee Arrived:' + participant.person.displayName);
  	i++;
  	traineeVideoFeed();
