@@ -66,10 +66,6 @@ window.open('http://localhost:8080/examples/jsp/Trainer_Side_G.html','_self');
    	
    	function traineeVideoFeed(){
    	gapi.hangout.av.setCameraMute(true);
-   	var w=320;var h=240;
-	var left = (screen.width/2)-(w/2);
-	var top = (screen.height/2)-(h/2);
-   	window.open('http://localhost:8080/examples/jsp/Trainee_Side_G.html',"NEW WINDOW",'toolbar=no,resizable = no, location=no, directories=no, status=no, menubar=no, scrollbars=no, copyhistory=no, width='+w+', height='+h+', top='+top+', left='+left);
    	var feed = gapi.hangout.layout.createParticipantVideoFeed(trainerId);
    	var canvas = gapi.hangout.layout.getVideoCanvas();
    	
