@@ -44,6 +44,7 @@ window.open('http://localhost:8080/examples/jsp/Trainer_Side_G.html','_self');
         });
  	unlimited_Script();
  }     
+ 	var trainerId;
  	function check_for_type(){
  	var participants = gapi.hangout.getParticipants();
  	var i=0;
@@ -52,7 +53,7 @@ window.open('http://localhost:8080/examples/jsp/Trainer_Side_G.html','_self');
  	var participant = participants[index];
  	if(participant.person.id == 115189246897117734937){
  	console.log(' Trainer is Arrived :'+ participant.person.displayName);
- 	var trainer = participant;var trainerId = participant.id;
+ 	var trainer = participant;trainerId = participant.id;
  	PopUp();
  	}
  	else
