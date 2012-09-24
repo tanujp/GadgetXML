@@ -55,7 +55,7 @@ window.open('http://localhost:8080/examples/jsp/Trainer_Side_G.html','_self');
  	var trainer = participant;var trainerId = participant.id;
  	PopUp();
  	var url = gapi.hangout.getHangoutUrl();
- 	alert(url);
+ 	console.log('Hangout url :'+ url);
  	}
  	else
  	{trainee[i] = participant; 
