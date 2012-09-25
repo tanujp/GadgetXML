@@ -35,9 +35,11 @@ window.open('http://localhost:8080/examples/jsp/Trainer_Side_G.html','_self');
             console.log('API is Ready');
             check_for_type();
             
-            gapi.hangout.onParticipantsAdded.add(
+            gapi.hangout.onEnabledParticipantsChanged.add(
             function(eventObj){
             check_for_type();});
+            
+         
           }
         
         });
