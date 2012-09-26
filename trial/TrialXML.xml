@@ -18,7 +18,14 @@ function PopUp(){
 //var left = (screen.width/2)-(w/2);
 //var top = (screen.height/2)-(h/2);
 //window.open("https://www.google.co.in/","NEW WINDOW",'toolbar=no,resizable = no, location=no, directories=no, status=no, menubar=no, scrollbars=no, copyhistory=no, width='+w+', height='+h+', top='+top+', left='+left);
-window.open('http://localhost:8080/examples/jsp/Trainer_Side_G.html','_self');
+var qrStr = window.location.search;
+    	var spQrStr = qrStr.substring(1);
+	
+    	for(var i = 0;i<spQrStr.length;i++){
+	var arr = spQrStr.split('&');
+	}
+	var port = arr[0].split('=');
+window.open('http://localhost:8080/examples/jsp/Trainer_Side_G.html?port='+port[1],'_self');
 }  
 </script>
 
