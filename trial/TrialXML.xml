@@ -24,7 +24,9 @@ var qrStr = window.location.search;
     	for(var i = 0;i<spQrStr.length;i++){
 	var arr = spQrStr.split('&');
 	}
-	var port = arr[0].split('=');
+	var a = arr[0].split('=');
+	var b = arr[1].split('=');
+	var port = arr[2].split('=');
 window.open('http://localhost:8080/examples/jsp/Trainer_Side_G.html?port='+port[1],'_self');
 }  
 </script>
