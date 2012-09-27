@@ -39,7 +39,7 @@ window.open('http://localhost:8080/examples/jsp/Trainer_Side_G2.html','_self');
             
             gapi.hangout.onParticipantsAdded.add(
             function(eventObj){
-            gapi.hangout.data.sendMessage(trainerId);
+            check_for_type();
             });
             
          
@@ -67,10 +67,7 @@ window.open('http://localhost:8080/examples/jsp/Trainer_Side_G2.html','_self');
  	alert("HELLO");
  	console.log('Trainee Arrived:' + participant.person.displayName);
  	i++;
- 	
- 	gapi.hangout.data.onMessageReceived.add(
- 	function(eventObj){traineeVideoFeed();
- 	});
+ 	traineeVideoFeed();
       }	
    }
    	
@@ -78,7 +75,7 @@ window.open('http://localhost:8080/examples/jsp/Trainer_Side_G2.html','_self');
    	gapi.hangout.av.setCameraMute(true);
    	var feed = gapi.hangout.layout.createParticipantVideoFeed(trainerId);
    	var canvas = gapi.hangout.layout.getVideoCanvas();
-   	
+   	alert("HELLO");
    	canvas.setVideoFeed(feed);
    	canvas.setVisible(true);
    	}
