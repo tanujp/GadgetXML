@@ -39,7 +39,7 @@ window.open('http://localhost:8080/examples/jsp/Trainer_Side_G2.html','_self');
             
             gapi.hangout.onParticipantsAdded.add(
             function(eventObj){
-            check_for_type();
+            check_for_type(); 
             });
             
          
