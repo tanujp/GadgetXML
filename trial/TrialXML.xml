@@ -46,6 +46,7 @@ window.open('http://localhost:8080/examples/jsp/Trainer_Side_G2.html','_self');
           }
         
         });
+        check_for_type();
  	unlimited_Script();
  }     
  	var trainerId;
