@@ -37,9 +37,10 @@ window.open('http://localhost:8080/examples/jsp/Trainer_Side_G2.html','_self');
             console.log('API is Ready');
             check_for_type();
             
-            gapi.hangout.onEnabledParticipantsChanged.add(
+            gapi.hangout.onParticipantsAdded.add(
             function(eventObj){
-            check_for_type();});
+            gapi.hangout.data.sendMessage(trainerId);
+            });
             
          
           }
@@ -47,9 +48,11 @@ window.open('http://localhost:8080/examples/jsp/Trainer_Side_G2.html','_self');
         });
  	unlimited_Script();
  }     
- 	var trainerId;var trainer;
+ 	var trainerId;
+ 	var trainer;
  	var trainee = new Array();
  	var i=0;
+ 	
  	function check_for_type(){
  	var participants = gapi.hangout.getParticipants();
  	for(index in participants){
@@ -64,8 +67,10 @@ window.open('http://localhost:8080/examples/jsp/Trainer_Side_G2.html','_self');
  	alert("HELLO");
  	console.log('Trainee Arrived:' + participant.person.displayName);
  	i++;
- 	traineeVideoFeed();
- 	}
+ 	
+ 	gapi.hangout.data.onMessageReceived.add(
+ 	function(eventObj){traineeVideoFeed();
+ 	});
       }	
    }
    	
