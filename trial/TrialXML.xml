@@ -22,7 +22,7 @@ var url = gapi.hangout.getHangoutUrl();
 console.log(url);
 window.open('http://localhost:8080/examples/jsp/Trainer_Side_G2.html','_self');
 }  
-</script>
+</script> 
 
 <script>	
 
