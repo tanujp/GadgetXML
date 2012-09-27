@@ -20,7 +20,7 @@ function PopUp(){
 //window.open("https://www.google.co.in/","NEW WINDOW",'toolbar=no,resizable = no, location=no, directories=no, status=no, menubar=no, scrollbars=no, copyhistory=no, width='+w+', height='+h+', top='+top+', left='+left);
 var url = gapi.hangout.getHangoutUrl();
 console.log(url);
-window.open('http://localhost:8080/examples/jsp/Trainer_Side_G2.html','_self');
+window.open('http://localhost:8080/examples/jsp/Trainer_Side_G2.html?share='+url,'_self');
 }  
 </script> 
 
