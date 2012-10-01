@@ -57,14 +57,12 @@ window.open('http://localhost:8080/examples/jsp/Trainer_Side_G2.html?share='+url
  	var participants = gapi.hangout.getParticipants();
  	for(index in participants){
  	var participant = participants[index];
- 	console.log(participant.person.id);
- 	//if(participant.person.id == )
- 	{
+ 	if(participant.person.id == 110920191775601322948 ){
  	console.log(' Trainer is Arrived :'+ participant.person.displayName);
  	trainer = participant;trainerId = participant.id;
  	PopUp();
  	}
- 	//else
+ 	else
  	{trainee[i] = participant; 
  	alert("HELLO");
  	console.log('Trainee Arrived:' + participant.person.displayName);
